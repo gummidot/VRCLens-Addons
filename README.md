@@ -1,17 +1,17 @@
-# VRCLens Mods
+# VRCLens Add-ons
 
-Custom mods for [VRCLens by Hirabiki](https://hirabiki.gumroad.com/l/rpnel) with drag-and-drop VRCFury prefabs.
+Camera filters and quality-of-life add-ons for [VRCLens by Hirabiki](https://hirabiki.gumroad.com/l/rpnel).
 
-[**Download the latest version**](https://github.com/gummidot/VRCLens-Mods/releases/latest)
+[**Download the latest version**](https://github.com/gummidot/VRCLens-Addons/releases/latest)
 
 > [!NOTE]
-> **Upgrading from v1.x?** The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any mod prefabs onto your avatar.
+> **Upgrading from v1.x?** The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any prefabs onto your avatar.
 
 ## Installation
 
-Each mod is a VRCFury prefab that you drag-n-drop onto your avatar to install.
+Each add-on is a VRCFury prefab that you drag-n-drop onto your avatar to install.
 You can pick which ones to install, then easily remove them by deleting the prefab.
-All mods are local-only or take no extra parameter memory.
+All add-ons are local-only or take no extra parameter memory.
 
 1. Install [VRCLens](https://hirabiki.gumroad.com/l/rpnel) on your avatar first.
 1. Make sure you have [VRCFury](https://vrcfury.com/download) installed.
@@ -26,65 +26,65 @@ All mods are local-only or take no extra parameter memory.
 > [!WARNING]
 > These are unofficial add-ons to VRCLens and may break when VRCLens updates. Older or newer versions may not work.
 
-- **VRCLens 1.9.2**
 - **VRCLens 1.10.0**
+- **VRCLens 1.9.2**
 
-## Mods
+## Add-ons
 
 **Camera**
 
 | Prefab | Description |
 |--------|-------------|
-| [SmoothRotate](#smoothrotate) | Smooths out camera movement |
-| [SmoothZoom](#smoothzoom) | Adds slight smoothing to the Zoom slider |
-| [CustomResolution](#customresolution) | Overrides camera resolution and anti-aliasing |
-| [FarClipPlane](#farclipplane) | Increases the camera's far clipping plane |
-| [PlayerVisibility](#playervisibility) | Hide remote players or yourself from VRCLens |
+| [Smooth Rotate](#smooth-rotate) | Smooths out camera movement |
+| [Smooth Zoom](#smooth-zoom) | Adds slight smoothing to the Zoom slider |
+| [Custom Resolution](#custom-resolution) | Overrides camera resolution and anti-aliasing |
+| [Far Clip Plane](#far-clip-plane) | Increases the camera's far clipping plane |
+| [Player Visibility](#player-visibility) | Hide remote players or yourself from VRCLens |
 
 **Drone**
 
 | Prefab | Description |
 |--------|-------------|
-| [DroneSpeed](#dronespeed) | Drone Speed slider goes slower or faster than default |
-| [MoveDroneVertical](#movedronevertical) | Puppet menu to move the drone vertically |
-| [AvatarOffset](#avataroffset) | Offsets the camera from your avatar while keeping hand control |
+| [Drone Speed](#drone-speed) | Drone Speed slider goes slower or faster than default |
+| [Move Drone Vertical](#move-drone-vertical) | Puppet menu to move the drone vertically |
+| [Avatar Offset](#avatar-offset) | Offsets the camera from your avatar while keeping hand control |
 
 **Focus**
 
 | Prefab | Description |
 |--------|-------------|
-| [ManualFocus (9m)](#manualfocus-9m) | Limits the Manual Focus slider to 9m |
-| [ManualFocus (0.1m to 9m)](#manualfocus-01m-to-9m) | Allows Manual Focus down to 0.1m |
-| [ManualFocusAssist](#manualfocusassist) | Reduces blur on avatars near your focus point |
-| [MaxBlurSize](#maxblursize) | Adjusts the maximum blur size for performance |
+| [Manual Focus (9m)](#manual-focus-9m) | Limits the Manual Focus slider to 9m |
+| [Manual Focus (0.1m to 9m)](#manual-focus-01m-to-9m) | Allows Manual Focus down to 0.1m |
+| [Manual Focus Assist](#manual-focus-assist) | Reduces blur on avatars near your focus point |
+| [Max Blur Size](#max-blur-size) | Adjusts the maximum blur size for performance |
 
 **Filters**
 
 | Prefab | Description |
 |--------|-------------|
-| [ChromaticAberration](#chromaticaberration) | Color fringing effect (lens imperfection) |
-| [ColorGrading](#colorgrading) | Shadow/midtone/highlight color adjustments |
-| [DepthFog](#depthfog) | Atmospheric fog based on scene depth |
-| [FilmGrain](#filmgrain) | Film grain overlay effect |
-| [FisheyeLens](#fisheyelens) | Fisheye lens distortion |
-| [GhostLens](#ghostlens) | Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters |
+| [Chromatic Aberration](#chromatic-aberration) | Color fringing effect (lens imperfection) |
+| [Color Grading](#color-grading) | Shadow/midtone/highlight color adjustments with brightness |
+| [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
+| [Film Grain](#film-grain) | Film grain overlay effect |
+| [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
+| [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters |
 | [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
-| [TiltShift](#tiltshift) | Tilt-shift miniature depth-of-field |
+| [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
 | [Vignette](#vignette) | Vignette darkening around edges |
 
 **Utility**
 
 | Prefab | Description |
 |--------|-------------|
-| [FixAvatarDrop](#fixavatardrop) | Fixes Avatar Drop broken in VRCLens 1.9.1+ |
-| [VRCLensOptimizer](#vrclensoptimizer) | Removes optional VRCLens components |
-| [MenuExtra](#menuextra) | Miscellaneous menu improvements |
+| [Fix Avatar Drop](#fix-avatar-drop) | Fixes Avatar Drop broken in VRCLens 1.9.1+ |
+| [VRCLens Optimizer](#vrclens-optimizer) | Removes optional VRCLens components |
+| [Menu Extra](#menu-extra) | Miscellaneous menu improvements |
 
 ---
 
 ## Camera
 
-### SmoothRotate
+### Smooth Rotate
 
 **Adds a slider that smooths out camera movement**
 
@@ -92,7 +92,7 @@ Works in both desktop and VR, and can smooth much more than OVR-SmoothTracking.
 
 #### Usage
 
-The slider will be in your menu under `VRCLens/Custom/SmoothRotate`.
+The slider will be in your menu under `VRCLens/Custom/Smooth Rotate`.
 0% is the minimum (default) smoothing, and 100% is the maximum amount of smoothing.
 
 Make sure Stabilize mode is on (the white/yellow hand icon) for this to work.
@@ -103,7 +103,7 @@ Make sure Stabilize mode is on (the white/yellow hand icon) for this to work.
 
 Thanks to [Minkis](https://www.youtube.com/watch?v=XMcTfFoNUHA) for explaining how to do this.
 
-### SmoothZoom
+### Smooth Zoom
 
 **Adds slight smoothing to the Zoom slider**
 
@@ -113,7 +113,7 @@ Use the built-in Zoom slider as usual.
 
 <video src="https://github.com/user-attachments/assets/b9be523d-e54e-4b8c-bd44-dd43ec843ce1"></video>
 
-### CustomResolution
+### Custom Resolution
 
 **Overrides the camera resolution and anti-aliasing**
 
@@ -129,7 +129,7 @@ Optionally click **Use Full SBS 3D (experimental)** if you want to enable that. 
 
 ![CustomResolution](Doc/CustomResolution.png)
 
-### FarClipPlane
+### Far Clip Plane
 
 **Increases the camera's far clipping plane**
 
@@ -138,13 +138,13 @@ This adds a local-only slider that increases the far clipping plane up to `12800
 
 #### Usage
 
-The slider will be in your menu under `VRCLens/Custom/FarClipPlane`.
+The slider will be in your menu under `VRCLens/Custom/Far Clip Plane`.
 
 <video src="https://github.com/user-attachments/assets/bb43007a-006c-4075-aa23-1c9b4624e407"></video>
 
 Test worlds: [Tulip Riverie...](https://vrchat.com/home/world/wrld_fcad2657-05c6-4226-ac5d-9cd1688beb74/info), [Cycle of Life](https://vrchat.com/home/world/wrld_cd085851-4baf-4fb8-9a2a-e0e20f686502/info)
 
-### PlayerVisibility
+### Player Visibility
 
 **Hide remote players or yourself from VRCLens**
 
@@ -171,7 +171,7 @@ The toggles will be in your menu under `VRCLens/Custom/Player Visibility`.
 
 ## Drone
 
-### DroneSpeed
+### Drone Speed
 
 **Modifies the Drone Speed slider to go slower or faster than default**
 
@@ -186,7 +186,7 @@ Use the built-in Drone Speed slider as usual.
 
 <video src="https://github.com/user-attachments/assets/672eee73-1523-4737-9267-767bda7d8efb"></video>
 
-### MoveDroneVertical
+### Move Drone Vertical
 
 **Adds a puppet menu to move the drone vertically**
 
@@ -198,7 +198,7 @@ The puppet menu will be in your menu under `VRCLens/Custom/Move Drone Vertical`.
 
 <video src="https://github.com/user-attachments/assets/172956c2-84d5-4f11-9ad8-f93599b73564"></video>
 
-### AvatarOffset
+### Avatar Offset
 
 **Offsets the camera from your avatar while keeping hand control**
 
@@ -206,7 +206,7 @@ Offsets the camera from your avatar like Avatar Drop, except you can still move 
 
 #### Usage
 
-There will be 3 toggles in your menu under `VRCLens/Custom/AvatarOffset`:
+There will be 3 toggles in your menu under `VRCLens/Custom/Avatar Offset`:
 
 - **AvatarOffset** enables the avatar offset. Once toggled, use the Drone to move the camera away from you.
 - **Rotate With Avatar** locks the camera's rotation with your avatar rotation. By default, the camera stays in place when you rotate.
@@ -218,7 +218,7 @@ There will be 3 toggles in your menu under `VRCLens/Custom/AvatarOffset`:
 
 ## Focus
 
-### ManualFocus (9m)
+### Manual Focus (9m)
 
 **Limits the Manual Focus slider to 9m**
 
@@ -230,7 +230,7 @@ Use the built-in Manual Focus slider as usual.
 
 <video src="https://github.com/user-attachments/assets/9f8496e8-8a36-44f0-b450-0b3474b765f4"></video>
 
-### ManualFocus (0.1m to 9m)
+### Manual Focus (0.1m to 9m)
 
 **Allows Manual Focus down to 0.1m instead of the default 0.5m minimum**
 
@@ -242,7 +242,7 @@ Use the built-in Manual Focus slider as usual.
 
 <video src="https://github.com/user-attachments/assets/c04017d5-4824-4fda-b1ae-a4528d427ae5"></video>
 
-### ManualFocusAssist
+### Manual Focus Assist
 
 **Uses avatar auto-focus to reduce blur on avatars near your Manual Focus point**
 
@@ -252,13 +252,13 @@ Helps keep avatars sharp when using Manual Focus. Enable Avatar AF, and all avat
 
 Enable **Avatar Auto-Focus** (Avatar AF) in VRCLens. Use the built-in Manual Focus slider as usual.
 
-Manual Focus Assist is **enabled by default** when the mod is installed. Use the toggle in the menu to turn it on or off in-game.
+Manual Focus Assist is **enabled by default** when the add-on is installed. Use the toggle in the menu to turn it on or off in-game.
 
 <video src="https://github.com/user-attachments/assets/f07314cb-2abd-43c8-877f-fd09d580ecae"></video>
 
 #### Menu Options
 
-The toggle will be in your menu under `VRCLens/Custom/ManualFocusAssist`.
+The toggle will be in your menu under `VRCLens/Custom/Manual Focus Assist`.
 
 The default settings work well in most cases, but you can adjust them further in the menu.
 
@@ -281,7 +281,7 @@ Focus at 10m, Zone Size 2m, Zone Softness 1m:
           softness (1m)               softness (1m)
 ```
 
-### MaxBlurSize
+### Max Blur Size
 
 **Adjusts the maximum blur size for performance**
 
@@ -289,7 +289,7 @@ Adds a local-only slider that lets you adjust the maximum blur size when using D
 
 #### Usage
 
-The slider will be in your menu under `VRCLens/Custom/MaxBlurSize`.
+The slider will be in your menu under `VRCLens/Custom/Max Blur Size`.
 
 At 0%, the slider has no effect so it uses whatever blur size you installed VRCLens with. After 0%, the slider increases blur size from `Very Small` up until `Very Large` (see VRCLens installer for the different options).
 
@@ -299,7 +299,7 @@ At 0%, the slider has no effect so it uses whatever blur size you installed VRCL
 
 ## Filters
 
-### ChromaticAberration
+### Chromatic Aberration
 
 **Chromatic aberration (color fringing) effect**
 
@@ -324,11 +324,11 @@ Axial Focus-Aware submenu:
 | Enabled | On / Off | On | Reduces axial CA in the focus zone so sharp subjects stay clean. |
 | Magenta-Green | On / Off | Off | Switch between red/blue fringing and magenta/green fringing. |
 
-### ColorGrading
+### Color Grading
 
-**Shadow/midtone/highlight color grading with saturation, vibrance, and contrast**
+**Shadow/midtone/highlight color grading with brightness, saturation, vibrance, and contrast**
 
-Global saturation, vibrance, and contrast. Plus per-zone temperature and RGB shifts for shadows, midtones, and highlights.
+Global saturation, vibrance, and contrast. Plus per-zone brightness, temperature, and RGB shifts for shadows, midtones, and highlights.
 
 #### Usage
 
@@ -347,6 +347,7 @@ Per-zone controls (Shadows, Midtones, Highlights submenus):
 
 | Setting | Range | Default | Description |
 |---|---|---|---|
+| Brightness | 0% - 100% | 50% | 50% = no change, 0% = darker, 100% = brighter. |
 | Temperature | 0% - 100% | 50% | 0% = cool/blue, 50% = neutral, 100% = warm/orange. |
 | R / G / B | 0% - 100% | 50% | Individual color adjustment. 50% = neutral. |
 
@@ -354,7 +355,7 @@ Per-zone controls (Shadows, Midtones, Highlights submenus):
 |---|---|
 | Reset | Resets all color grading parameters to defaults. |
 
-### DepthFog
+### Depth Fog
 
 **Atmospheric fog based on scene depth**
 
@@ -373,7 +374,7 @@ The controls will be in your menu under `VRCLens/Custom/Depth Fog`.
 | Start Distance | 0% - 100% | 0% | Distance where fog begins (maps to 0-500m). |
 | Color R / G / B | 0% - 100% | 70% each | Fog color. Default is neutral grey. |
 
-### FilmGrain
+### Film Grain
 
 **Analog film grain overlay**
 
@@ -393,7 +394,7 @@ The controls will be in your menu under `VRCLens/Custom/Film Grain`.
 | Brightness | 0% - 100% | 50% | Grain brightness bias. Below 50% darkens, above 50% brightens. |
 | Speed | 0% - 100% | 50% | Animation speed. 0% = frozen, 100% = fast. |
 
-### FisheyeLens
+### Fisheye Lens
 
 **Fisheye lens distortion**
 
@@ -419,7 +420,7 @@ The controls will be in your menu under `VRCLens/Custom/Fisheye Lens`.
 | Center X | 0% - 100% | 50% | Moves the distortion center left/right. |
 | Center Y | 0% - 100% | 50% | Moves the distortion center up/down. |
 
-### GhostLens
+### Ghost Lens
 
 **Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters**
 
@@ -521,7 +522,7 @@ The toggles will be in your menu under `VRCLens/Custom/Letterbox`. Select one as
 | 4:5 | Portrait |
 | 9:16 | Vertical |
 
-### TiltShift
+### Tilt-Shift
 
 **Tilt-shift miniature depth-of-field effect**
 
@@ -582,7 +583,7 @@ The controls will be in your menu under `VRCLens/Custom/Vignette`.
 
 ## Utility
 
-### FixAvatarDrop
+### Fix Avatar Drop
 
 **Fixes the Avatar Drop feature broken in VRCLens 1.9.1 and above**
 
@@ -592,7 +593,7 @@ Avatar Drop is bugged in VRCLens 1.9.1 and above (as of VRCLens 1.9.2). This pre
 
 Use the **Advanced > Extra > Avatar-Drop** toggle as usual. It should now work.
 
-### VRCLensOptimizer
+### VRCLens Optimizer
 
 **Removes optional components from VRCLens (materials, poly count)**
 
@@ -615,7 +616,7 @@ Drag and drop the `VRCLensOptimizer` prefab onto the `VRCLens` object on your av
 
 ![VRCLensOptimizer](Doc/VRCLens_Optimizer.png)
 
-### MenuExtra
+### Menu Extra
 
 **Miscellaneous improvements to the VRCLens menu**
 
