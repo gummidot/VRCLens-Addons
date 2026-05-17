@@ -2,7 +2,7 @@
 
 Camera filters and quality-of-life add-ons for [VRCLens by Hirabiki](https://hirabiki.gumroad.com/l/rpnel).
 
-[**Download the latest version**](https://github.com/gummidot/VRCLens-Addons/releases/latest)
+[**Download the latest version**](https://github.com/gummidot/VRCLens-Addons/releases/latest) | [日本語はこちら (Japanese)](README_JP.md)
 
 > [!NOTE]
 > **Upgrading from v1.x?** The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any prefabs onto your avatar.
@@ -631,6 +631,13 @@ Drag and drop the `VRCLensOptimizer` prefab onto the `VRCLens` object on your av
 
 - [Hirabiki](https://hirabiki.gumroad.com/l/rpnel) for VRCLens
 - Gerzybow for the original ideas and feedback for Ghost Lens and Chromatic Aberration
+
+## Contact
+
+Bug reports and feature requests: [GitHub Issues](https://github.com/gummidot/VRCLens-Addons/issues)
+
+- Twitter/X: [@gummidott](https://x.com/gummidott)
+- Bluesky: [@gummidot](https://bsky.app/profile/gummidot.bsky.social)
 
 ---
 
