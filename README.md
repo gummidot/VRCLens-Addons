@@ -62,15 +62,15 @@ All add-ons are local-only or take no extra parameter memory.
 
 | Prefab | Description |
 |--------|-------------|
+| [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by Prism Lens FX filters *(paid, [Booth](https://gummidot.booth.pm/))* |
+| [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
 | [Chromatic Aberration](#chromatic-aberration) | Color fringing effect (lens imperfection) |
 | [Color Grading](#color-grading) | Shadow/midtone/highlight color adjustments with brightness |
-| [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
 | [Film Grain](#film-grain) | Film grain overlay effect |
-| [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
-| [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters |
-| [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
-| [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
 | [Vignette](#vignette) | Vignette darkening around edges |
+| [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
+| [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
+| [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
 
 **Utility**
 
@@ -299,128 +299,10 @@ At 0%, the slider has no effect so it uses whatever blur size you installed VRCL
 
 ## Filters
 
-### Chromatic Aberration
-
-**Chromatic aberration (color fringing) effect**
-
-Transverse CA creates radial color fringing that increases toward screen edges. Axial CA creates depth-dependent color fringing on out-of-focus areas. Both can be active simultaneously.
-
-#### Usage
-
-The sliders will be in your menu under `VRCLens/Custom/Chromatic Aberration`.
-
-<video src="https://github.com/user-attachments/assets/018d75ee-fefd-4c83-a3c3-8f048995cdd9"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Transverse CA | 0% - 100% | 0% | Color fringing toward screen edges. |
-| Axial CA | 0% - 100% | 0% | Color fringing on out-of-focus areas. |
-
-Axial Focus-Aware submenu:
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enabled | On / Off | On | Reduces axial CA in the focus zone so sharp subjects stay clean. |
-| Magenta-Green | On / Off | Off | Switch between red/blue fringing and magenta/green fringing. |
-
-### Color Grading
-
-**Shadow/midtone/highlight color grading with brightness, saturation, vibrance, and contrast**
-
-Global saturation, vibrance, and contrast. Plus per-zone brightness, temperature, and RGB shifts for shadows, midtones, and highlights.
-
-#### Usage
-
-The controls will be in your menu under `VRCLens/Custom/Color Grading` with submenus for each zone.
-
-<video src="https://github.com/user-attachments/assets/5fd955e0-21af-4cb9-97e0-a28246fb1d1c"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Saturation | 0% - 100% | 50% | Color intensity. 50% = no change, 0% = desaturated, 100% = oversaturated. |
-| Vibrance | 0% - 100% | 0% | Boosts muted colors without oversaturating skin tones. |
-| Contrast | 0% - 100% | 50% | 50% = no change, 0% = low contrast, 100% = high contrast. |
-
-Per-zone controls (Shadows, Midtones, Highlights submenus):
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Brightness | 0% - 100% | 50% | 50% = no change, 0% = darker, 100% = brighter. |
-| Temperature | 0% - 100% | 50% | 0% = cool/blue, 50% = neutral, 100% = warm/orange. |
-| R / G / B | 0% - 100% | 50% | Individual color adjustment. 50% = neutral. |
-
-| Setting | Description |
-|---|---|
-| Reset | Resets all color grading parameters to defaults. |
-
-### Depth Fog
-
-**Atmospheric fog based on scene depth**
-
-Adds fog that fades in with distance. Foreground stays clear while the background dissolves into haze.
-
-#### Usage
-
-The controls will be in your menu under `VRCLens/Custom/Depth Fog`.
-
-<video src="https://github.com/user-attachments/assets/8ded729e-0975-41d8-8cbf-9b7ac44d13c3"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Density | 0% - 100% | 17% | Fog thickness. |
-| Start Distance | 0% - 100% | 0% | Distance where fog begins (maps to 0-500m). |
-| Color R / G / B | 0% - 100% | 70% each | Fog color. Default is neutral grey. |
-
-### Film Grain
-
-**Analog film grain overlay**
-
-Moving film grain that blends dynamically with lighting, with heavier texture toward the edges.
-
-#### Usage
-
-The controls will be in your menu under `VRCLens/Custom/Film Grain`.
-
-<video src="https://github.com/user-attachments/assets/9cc01bf0-5067-40e7-a414-5d75af831021"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Intensity | 0% - 100% | 25% | Grain amount. 0% = off. |
-| Size | 0% - 100% | 0% | Grain particle size. 0% = fine (~1.5px), 100% = coarse (~4px). |
-| Brightness | 0% - 100% | 50% | Grain brightness bias. Below 50% darkens, above 50% brightens. |
-| Speed | 0% - 100% | 50% | Animation speed. 0% = frozen, 100% = fast. |
-
-### Fisheye Lens
-
-**Fisheye lens distortion**
-
-Fisheye lens distortion that bulges the center outward with increasing curvature toward the edges. Includes oval crop, edge softness, and a reverse (pincushion) mode.
+### Ghost Lens
 
 > [!NOTE]
-> This is a post-process filter that remaps existing pixels on screen. For a more realistic fisheye effect, consider [Flex FishEye Lens](https://goat-cannery.booth.pm/items/5512392).
-
-#### Usage
-
-The controls will be in your menu under `VRCLens/Custom/Fisheye Lens`.
-
-<video src="https://github.com/user-attachments/assets/86af8b33-2abd-486b-bcd8-9e591daf1eb7"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Strength | 0% - 100% | 12% | Fisheye distortion amount. |
-| Roundness | 0% - 100% | 0% | 0% = screen-filling oval, 100% = true circle. |
-| Lens Size | 0% - 100% | 65% | Oval crop size. Higher hides the crop entirely (full warped rectangle visible at 100%). |
-| Edge Softness | 0% - 100% | 0% | How gradually the edges fade to black. 0% = hard cutoff. |
-| Reverse Fisheye | 0% - 100% | 0% | Reverse fisheye distortion. Overrides Strength when active. |
-| Center X | 0% - 100% | 50% | Moves the distortion center left/right. |
-| Center Y | 0% - 100% | 50% | Moves the distortion center up/down. |
-
-### Ghost Lens
+> Ghost Lens is a paid add-on, available on [Booth](https://gummidot.booth.pm/). All other add-ons are free.
 
 **Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters**
 
@@ -479,7 +361,7 @@ Effects submenu:
 |---|---|---|---|
 | Shake | | | Handheld camera shake submenu. |
 | Shimmer | 0% - 100% | 0% | Randomized drift over time. |
-| Chroma | 0% - 100% | 0% | Chromatic color split on ghost reflections. Unlike [ChromaticAberration](#chromaticaberration), this only affects the ghost itself. |
+| Chroma | 0% - 100% | 0% | Chromatic color split on ghost reflections. Unlike [Chromatic Aberration](#chromatic-aberration), this only affects the ghost itself. |
 
 Shake submenu:
 
@@ -496,6 +378,128 @@ Advanced submenu:
 | Smear Width | 0% - 100% | 25% | Directional streak width. |
 | Layers | 0% - 100% | 0% | Trail distance multiplier (1-5 layers). |
 | Edge Smoothing | 0% - 100% | 30% | Fades the ghost effect near the screen edges to prevent edge streaking. Higher = cleaner edges, more muted ghost. |
+
+### Fisheye Lens
+
+**Fisheye lens distortion**
+
+Fisheye lens distortion that bulges the center outward with increasing curvature toward the edges. Includes oval crop, edge softness, and a reverse (pincushion) mode.
+
+> [!NOTE]
+> This is a post-process filter that remaps existing pixels on screen. For a more realistic fisheye effect, consider [Flex FishEye Lens](https://goat-cannery.booth.pm/items/5512392).
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Fisheye Lens`.
+
+<video src="https://github.com/user-attachments/assets/86af8b33-2abd-486b-bcd8-9e591daf1eb7"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Strength | 0% - 100% | 12% | Fisheye distortion amount. |
+| Roundness | 0% - 100% | 0% | 0% = screen-filling oval, 100% = true circle. |
+| Lens Size | 0% - 100% | 65% | Oval crop size. Higher hides the crop entirely (full warped rectangle visible at 100%). |
+| Edge Softness | 0% - 100% | 0% | How gradually the edges fade to black. 0% = hard cutoff. |
+| Reverse Fisheye | 0% - 100% | 0% | Reverse fisheye distortion. Overrides Strength when active. |
+| Center X | 0% - 100% | 50% | Moves the distortion center left/right. |
+| Center Y | 0% - 100% | 50% | Moves the distortion center up/down. |
+
+### Chromatic Aberration
+
+**Chromatic aberration (color fringing) effect**
+
+Transverse CA creates radial color fringing that increases toward screen edges. Axial CA creates depth-dependent color fringing on out-of-focus areas. Both can be active simultaneously.
+
+#### Usage
+
+The sliders will be in your menu under `VRCLens/Custom/Chromatic Aberration`.
+
+<video src="https://github.com/user-attachments/assets/018d75ee-fefd-4c83-a3c3-8f048995cdd9"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Transverse CA | 0% - 100% | 0% | Color fringing toward screen edges. |
+| Axial CA | 0% - 100% | 0% | Color fringing on out-of-focus areas. |
+
+Axial Focus-Aware submenu:
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enabled | On / Off | On | Reduces axial CA in the focus zone so sharp subjects stay clean. |
+| Magenta-Green | On / Off | Off | Switch between red/blue fringing and magenta/green fringing. |
+
+### Color Grading
+
+**Shadow/midtone/highlight color grading with brightness, saturation, vibrance, and contrast**
+
+Global saturation, vibrance, and contrast. Plus per-zone brightness, temperature, and RGB shifts for shadows, midtones, and highlights.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Color Grading` with submenus for each zone.
+
+<video src="https://github.com/user-attachments/assets/5fd955e0-21af-4cb9-97e0-a28246fb1d1c"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Saturation | 0% - 100% | 50% | Color intensity. 50% = no change, 0% = desaturated, 100% = oversaturated. |
+| Vibrance | 0% - 100% | 0% | Boosts muted colors without oversaturating skin tones. |
+| Contrast | 0% - 100% | 50% | 50% = no change, 0% = low contrast, 100% = high contrast. |
+
+Per-zone controls (Shadows, Midtones, Highlights submenus):
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Brightness | 0% - 100% | 50% | 50% = no change, 0% = darker, 100% = brighter. |
+| Temperature | 0% - 100% | 50% | 0% = cool/blue, 50% = neutral, 100% = warm/orange. |
+| R / G / B | 0% - 100% | 50% | Individual color adjustment. 50% = neutral. |
+
+| Setting | Description |
+|---|---|
+| Reset | Resets all color grading parameters to defaults. |
+
+### Film Grain
+
+**Analog film grain overlay**
+
+Moving film grain that blends dynamically with lighting, with heavier texture toward the edges.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Film Grain`.
+
+<video src="https://github.com/user-attachments/assets/9cc01bf0-5067-40e7-a414-5d75af831021"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Intensity | 0% - 100% | 25% | Grain amount. 0% = off. |
+| Size | 0% - 100% | 0% | Grain particle size. 0% = fine (~1.5px), 100% = coarse (~4px). |
+| Brightness | 0% - 100% | 50% | Grain brightness bias. Below 50% darkens, above 50% brightens. |
+| Speed | 0% - 100% | 50% | Animation speed. 0% = frozen, 100% = fast. |
+
+### Vignette
+
+**Vignette effect with adjustable shape and softness**
+
+Darkens screen edges toward black while keeping the center bright. Shape can morph from an oval (following screen aspect) to a true circle.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Vignette`.
+
+<video src="https://github.com/user-attachments/assets/b1297efe-c6c0-4737-8509-7bc3541ad93d"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Strength | 0% - 100% | 25% | Darkening intensity at edges. |
+| Radius | 0% - 100% | 80% | How far from center before darkening starts. |
+| Softness | 0% - 100% | 50% | How gradual the fade is. Low = sharp edge, high = smooth fade. |
+| Roundness | 0% - 100% | 0% | 0% = oval, 100% = circle. |
 
 ### Letterbox
 
@@ -521,6 +525,25 @@ The toggles will be in your menu under `VRCLens/Custom/Letterbox`. Select one as
 | 1:1 | Square |
 | 4:5 | Portrait |
 | 9:16 | Vertical |
+
+### Depth Fog
+
+**Atmospheric fog based on scene depth**
+
+Adds fog that fades in with distance. Foreground stays clear while the background dissolves into haze.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Depth Fog`.
+
+<video src="https://github.com/user-attachments/assets/8ded729e-0975-41d8-8cbf-9b7ac44d13c3"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Density | 0% - 100% | 17% | Fog thickness. |
+| Start Distance | 0% - 100% | 0% | Distance where fog begins (maps to 0-500m). |
+| Color R / G / B | 0% - 100% | 70% each | Fog color. Default is neutral grey. |
 
 ### Tilt-Shift
 
@@ -558,26 +581,6 @@ The controls will be in your menu under `VRCLens/Custom/Tilt-Shift`.
 | Position | 0% - 100% | 50% | Pushes the sharp area closer or farther from VRCLens's focus point. 50% = no offset, 0% = pull closer (~50m), 100% = push farther (~50m). |
 | Width | 0% - 100% | 50% | How deep the sharp area is. Scales with distance, so a small value gives a thin slice and a large value keeps more of the scene sharp. |
 | Angle | 0% - 100% | 50% | Tilts the sharp area so it goes from near-foreground to far-distance across the frame. 50% = no tilt (regular depth of field), below 50% = top of frame focused near (good for shots looking down), above 50% = top of frame focused far (good for shots looking up). |
-
-### Vignette
-
-**Vignette effect with adjustable shape and softness**
-
-Darkens screen edges toward black while keeping the center bright. Shape can morph from an oval (following screen aspect) to a true circle.
-
-#### Usage
-
-The controls will be in your menu under `VRCLens/Custom/Vignette`.
-
-<video src="https://github.com/user-attachments/assets/b1297efe-c6c0-4737-8509-7bc3541ad93d"></video>
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enable | On / Off | Off | Enable or disable the effect. |
-| Strength | 0% - 100% | 25% | Darkening intensity at edges. |
-| Radius | 0% - 100% | 80% | How far from center before darkening starts. |
-| Softness | 0% - 100% | 50% | How gradual the fade is. Low = sharp edge, high = smooth fade. |
-| Roundness | 0% - 100% | 0% | 0% = oval, 100% = circle. |
 
 ---
 
