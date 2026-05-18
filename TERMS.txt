@@ -1,0 +1,15 @@
+VRCLens Add-ons
+Copyright (c) 2026 gummidot. All rights reserved.
+
+This product requires VRCLens by Hirabiki (sold separately).
+VRCLens is not included and is subject to its own terms of use.
+
+Terms of Use
+
+- You receive a personal, non-transferable license to use this product.
+- You may use and modify this product on your own VRChat avatars.
+- Commercial usage, including monetized videos or streams, is allowed.
+- You may redistribute the free base add-ons, unmodified or modified.
+- Redistribution or resale of Ghost Lens is prohibited.
+- Embedding this product in public avatars or worlds is prohibited.
+- This product is provided "as is" without warranty of any kind.
