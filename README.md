@@ -31,6 +31,20 @@ All add-ons are local-only or take no extra parameter memory.
 
 ## Add-ons
 
+**Filters**
+
+| Prefab | Description |
+|--------|-------------|
+| [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by Prism Lens FX filters *(paid, [Booth](https://gummidot.booth.pm/items/8375173))* |
+| [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
+| [Chromatic Aberration](#chromatic-aberration) | Color fringing effect (lens imperfection) |
+| [Color Grading](#color-grading) | Shadow/midtone/highlight color adjustments with brightness |
+| [Film Grain](#film-grain) | Film grain overlay effect |
+| [Vignette](#vignette) | Vignette darkening around edges |
+| [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
+| [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
+| [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
+
 **Camera**
 
 | Prefab | Description |
@@ -58,20 +72,6 @@ All add-ons are local-only or take no extra parameter memory.
 | [Manual Focus Assist](#manual-focus-assist) | Reduces blur on avatars near your focus point |
 | [Max Blur Size](#max-blur-size) | Adjusts the maximum blur size for performance |
 
-**Filters**
-
-| Prefab | Description |
-|--------|-------------|
-| [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by Prism Lens FX filters *(paid, [Booth](https://gummidot.booth.pm/))* |
-| [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
-| [Chromatic Aberration](#chromatic-aberration) | Color fringing effect (lens imperfection) |
-| [Color Grading](#color-grading) | Shadow/midtone/highlight color adjustments with brightness |
-| [Film Grain](#film-grain) | Film grain overlay effect |
-| [Vignette](#vignette) | Vignette darkening around edges |
-| [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
-| [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
-| [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
-
 **Utility**
 
 | Prefab | Description |
@@ -82,227 +82,12 @@ All add-ons are local-only or take no extra parameter memory.
 
 ---
 
-## Camera
-
-### Smooth Rotate
-
-**Adds a slider that smooths out camera movement**
-
-Works in both desktop and VR, and can smooth much more than OVR-SmoothTracking.
-
-#### Usage
-
-The slider will be in your menu under `VRCLens/Custom/Smooth Rotate`.
-0% is the minimum (default) smoothing, and 100% is the maximum amount of smoothing.
-
-Make sure Stabilize mode is on (the white/yellow hand icon) for this to work.
-
-<video src="https://github.com/user-attachments/assets/05d5c2fd-28e6-4f38-8b98-11be5db84a1b"></video>
-
-#### Credits
-
-Thanks to [Minkis](https://www.youtube.com/watch?v=XMcTfFoNUHA) for explaining how to do this.
-
-### Smooth Zoom
-
-**Adds slight smoothing to the Zoom slider**
-
-#### Usage
-
-Use the built-in Zoom slider as usual.
-
-<video src="https://github.com/user-attachments/assets/b9be523d-e54e-4b8c-bd44-dd43ec843ce1"></video>
-
-### Custom Resolution
-
-**Overrides the camera resolution and anti-aliasing**
-
-Usually, the sensor resolution and anti-aliasing can only be set when installing VRCLens. This lets you change the resolution and anti-aliasing without having to reinstall VRCLens.
-
-It also adds experimental support for full SBS 3D. VRCLens currently uses half SBS for its side-by-side 3D mode, so recording in 3D at 1920x1080 would produce a 1920x1080 video at half the horizontal resolution (960x1080 per eye). Full SBS would allow you to record at 3840x1080 and produce a 1920x1080 video at full resolution (1920x1080 per eye).
-
-#### Usage
-
-Enter your custom resolution and/or anti-aliasing in **Override Resolution** and **Override Anti-Aliasing**.
-
-Optionally click **Use Full SBS 3D (experimental)** if you want to enable that. If so, make sure you change the resolution so the width is doubled.
-
-![CustomResolution](Doc/CustomResolution.png)
-
-### Far Clip Plane
-
-**Increases the camera's far clipping plane**
-
-In some worlds, far objects disappear in VRCLens because of its short far clip plane.
-This adds a local-only slider that increases the far clipping plane up to `128000`.
-
-#### Usage
-
-The slider will be in your menu under `VRCLens/Custom/Far Clip Plane`.
-
-<video src="https://github.com/user-attachments/assets/bb43007a-006c-4075-aa23-1c9b4624e407"></video>
-
-Test worlds: [Tulip Riverie...](https://vrchat.com/home/world/wrld_fcad2657-05c6-4226-ac5d-9cd1688beb74/info), [Cycle of Life](https://vrchat.com/home/world/wrld_cd085851-4baf-4fb8-9a2a-e0e20f686502/info)
-
-### Player Visibility
-
-**Hide remote players or yourself from VRCLens**
-
-Two independent toggles that control what appears in VRCLens:
-
-- **Hide Remote Players** removes other players from your photos.
-- **Hide Self** removes your own avatar from photos.
-
-Both can be enabled simultaneously to capture only the world with no players at all.
-
-> [!NOTE]
-> This does not affect world mirrors or what other players see.
-
-#### Usage
-
-The toggles will be in your menu under `VRCLens/Custom/Player Visibility`.
-
-| Setting | Default | Description |
-|---|---|---|
-| Hide Remote Players | Off | Hides other players from VRCLens. |
-| Hide Self | Off | Hides your own avatar from VRCLens. |
-
----
-
-## Drone
-
-### Drone Speed
-
-**Modifies the Drone Speed slider to go slower or faster than default**
-
-There are two versions, only add one to your avatar:
-
-- **Slower** allows the drone to move much slower. 0% is now zero speed.
-- **Slower and Faster** allows the drone to move much slower and much faster. 0% is now zero speed, 75% is the original max speed, and 100% is 32x the original max speed.
-
-#### Usage
-
-Use the built-in Drone Speed slider as usual.
-
-<video src="https://github.com/user-attachments/assets/672eee73-1523-4737-9267-767bda7d8efb"></video>
-
-### Move Drone Vertical
-
-**Adds a puppet menu to move the drone vertically**
-
-The usual way to move the drone vertically is to use gestures to switch between forward/back and up/down movement. With a separate puppet menu, you can move the drone vertically more easily, and also move both forward/back and up/down at the same time.
-
-#### Usage
-
-The puppet menu will be in your menu under `VRCLens/Custom/Move Drone Vertical`.
-
-<video src="https://github.com/user-attachments/assets/172956c2-84d5-4f11-9ad8-f93599b73564"></video>
-
-### Avatar Offset
-
-**Offsets the camera from your avatar while keeping hand control**
-
-Offsets the camera from your avatar like Avatar Drop, except you can still move the camera with your hand. As if you had a mirrored clone that was further, taller, or shorter than you actually are.
-
-#### Usage
-
-There will be 3 toggles in your menu under `VRCLens/Custom/Avatar Offset`:
-
-- **AvatarOffset** enables the avatar offset. Once toggled, use the Drone to move the camera away from you.
-- **Rotate With Avatar** locks the camera's rotation with your avatar rotation. By default, the camera stays in place when you rotate.
-- **Drop (Reset to Hand)** resets the camera back to your hand. It is the same as the Drone Drop button, just here for convenience.
-
-<video src="https://github.com/user-attachments/assets/8cfbe8ca-1adb-4b94-802d-95cf99186c06"></video>
-
----
-
-## Focus
-
-### Manual Focus (9m)
-
-**Limits the Manual Focus slider to 9m**
-
-Limits the Manual Focus slider to a maximum of 9m, or 50% in the original slider. Also adds a very small amount of smoothing. Use this for finer control over focus at short distances.
-
-#### Usage
-
-Use the built-in Manual Focus slider as usual.
-
-<video src="https://github.com/user-attachments/assets/9f8496e8-8a36-44f0-b450-0b3474b765f4"></video>
-
-### Manual Focus (0.1m to 9m)
-
-**Allows Manual Focus down to 0.1m instead of the default 0.5m minimum**
-
-Modifies VRCLens to allow closer focus than the default 0.5m minimum. Also limits Manual Focus to a maximum of 9m, adds a small amount of smoothing, and disables Auto Focus.
-
-#### Usage
-
-Use the built-in Manual Focus slider as usual.
-
-<video src="https://github.com/user-attachments/assets/c04017d5-4824-4fda-b1ae-a4528d427ae5"></video>
-
-### Manual Focus Assist
-
-**Uses avatar auto-focus to reduce blur on avatars near your Manual Focus point**
-
-Helps keep avatars sharp when using Manual Focus. Enable Avatar AF, and all avatars within 2m of your focus distance get reduced blur. Everything else blurs normally.
-
-#### Usage
-
-Enable **Avatar Auto-Focus** (Avatar AF) in VRCLens. Use the built-in Manual Focus slider as usual.
-
-Manual Focus Assist is **enabled by default** when the add-on is installed. Use the toggle in the menu to turn it on or off in-game.
-
-<video src="https://github.com/user-attachments/assets/f07314cb-2abd-43c8-877f-fd09d580ecae"></video>
-
-#### Menu Options
-
-The toggle will be in your menu under `VRCLens/Custom/Manual Focus Assist`.
-
-The default settings work well in most cases, but you can adjust them further in the menu.
-
-| Setting | Range | Default | Description |
-|---|---|---|---|
-| Enabled | On / Off | On | Enable or disable the effect. |
-| Strength | 0% - 100% | 85% | How much blur is reduced. 0 = no effect, 100 = fully sharp. |
-| Zone Size | 0m - 20m | 2m | How far in front of and behind the focus distance avatars are affected. 2m means ±2m from focus. |
-| Zone Softness | 0m - 5m | 1m | Smooths the transition at zone edges so avatars don't suddenly jump between sharp and blurry. |
-| Edge Feather | 0 - 0.02 | 0.005 | Softens avatar edges where they meet the blurred background. Higher values = softer transition but may bleed. |
-| Peaking | On / Off | Off | Shows a debug overlay on detected avatars: green = within zone (blur reduced), yellow = transition zone (partial reduction), red = outside zone (full blur). Only visible in preview mode. |
-
-```
-Focus at 10m, Zone Size 2m, Zone Softness 1m:
-
-  Camera --[7m]~~[8m]=====FOCUS ZONE=====[12m]~~[13m]--
-                  ↑            ↑          ↑
-             zone start      focus    zone end
-                ↕                           ↕
-          softness (1m)               softness (1m)
-```
-
-### Max Blur Size
-
-**Adjusts the maximum blur size for performance**
-
-Adds a local-only slider that lets you adjust the maximum blur size when using DoF, which you can use to improve performance (lower blur size = better performance) or change how the blurring looks.
-
-#### Usage
-
-The slider will be in your menu under `VRCLens/Custom/Max Blur Size`.
-
-At 0%, the slider has no effect so it uses whatever blur size you installed VRCLens with. After 0%, the slider increases blur size from `Very Small` up until `Very Large` (see VRCLens installer for the different options).
-
-<video src="https://github.com/user-attachments/assets/d929ee5a-3fec-4bab-8f0e-3e6255932236"></video>
-
----
-
 ## Filters
 
 ### Ghost Lens
 
 > [!NOTE]
-> Ghost Lens is a paid add-on, available on [Booth](https://gummidot.booth.pm/). All other add-ons are free.
+> Ghost Lens is a paid add-on, available on [Booth](https://gummidot.booth.pm/items/8375173). All other add-ons are free.
 
 **Ghosting/motion blur filter inspired by [Prism Lens FX](https://prismlensfx.com/) filters**
 
@@ -581,6 +366,221 @@ The controls will be in your menu under `VRCLens/Custom/Tilt-Shift`.
 | Position | 0% - 100% | 50% | Pushes the sharp area closer or farther from VRCLens's focus point. 50% = no offset, 0% = pull closer (~50m), 100% = push farther (~50m). |
 | Width | 0% - 100% | 50% | How deep the sharp area is. Scales with distance, so a small value gives a thin slice and a large value keeps more of the scene sharp. |
 | Angle | 0% - 100% | 50% | Tilts the sharp area so it goes from near-foreground to far-distance across the frame. 50% = no tilt (regular depth of field), below 50% = top of frame focused near (good for shots looking down), above 50% = top of frame focused far (good for shots looking up). |
+
+---
+
+## Camera
+
+### Smooth Rotate
+
+**Adds a slider that smooths out camera movement**
+
+Works in both desktop and VR, and can smooth much more than OVR-SmoothTracking.
+
+#### Usage
+
+The slider will be in your menu under `VRCLens/Custom/Smooth Rotate`.
+0% is the minimum (default) smoothing, and 100% is the maximum amount of smoothing.
+
+Make sure Stabilize mode is on (the white/yellow hand icon) for this to work.
+
+<video src="https://github.com/user-attachments/assets/05d5c2fd-28e6-4f38-8b98-11be5db84a1b"></video>
+
+#### Credits
+
+Thanks to [Minkis](https://www.youtube.com/watch?v=XMcTfFoNUHA) for explaining how to do this.
+
+### Smooth Zoom
+
+**Adds slight smoothing to the Zoom slider**
+
+#### Usage
+
+Use the built-in Zoom slider as usual.
+
+<video src="https://github.com/user-attachments/assets/b9be523d-e54e-4b8c-bd44-dd43ec843ce1"></video>
+
+### Custom Resolution
+
+**Overrides the camera resolution and anti-aliasing**
+
+Usually, the sensor resolution and anti-aliasing can only be set when installing VRCLens. This lets you change the resolution and anti-aliasing without having to reinstall VRCLens.
+
+It also adds experimental support for full SBS 3D. VRCLens currently uses half SBS for its side-by-side 3D mode, so recording in 3D at 1920x1080 would produce a 1920x1080 video at half the horizontal resolution (960x1080 per eye). Full SBS would allow you to record at 3840x1080 and produce a 1920x1080 video at full resolution (1920x1080 per eye).
+
+#### Usage
+
+Enter your custom resolution and/or anti-aliasing in **Override Resolution** and **Override Anti-Aliasing**.
+
+Optionally click **Use Full SBS 3D (experimental)** if you want to enable that. If so, make sure you change the resolution so the width is doubled.
+
+![CustomResolution](Doc/CustomResolution.png)
+
+### Far Clip Plane
+
+**Increases the camera's far clipping plane**
+
+In some worlds, far objects disappear in VRCLens because of its short far clip plane.
+This adds a local-only slider that increases the far clipping plane up to `128000`.
+
+#### Usage
+
+The slider will be in your menu under `VRCLens/Custom/Far Clip Plane`.
+
+<video src="https://github.com/user-attachments/assets/bb43007a-006c-4075-aa23-1c9b4624e407"></video>
+
+Test worlds: [Tulip Riverie...](https://vrchat.com/home/world/wrld_fcad2657-05c6-4226-ac5d-9cd1688beb74/info), [Cycle of Life](https://vrchat.com/home/world/wrld_cd085851-4baf-4fb8-9a2a-e0e20f686502/info)
+
+### Player Visibility
+
+**Hide remote players or yourself from VRCLens**
+
+Two independent toggles that control what appears in VRCLens:
+
+- **Hide Remote Players** removes other players from your photos.
+- **Hide Self** removes your own avatar from photos.
+
+Both can be enabled simultaneously to capture only the world with no players at all.
+
+> [!NOTE]
+> This does not affect world mirrors or what other players see.
+
+#### Usage
+
+The toggles will be in your menu under `VRCLens/Custom/Player Visibility`.
+
+| Setting | Default | Description |
+|---|---|---|
+| Hide Remote Players | Off | Hides other players from VRCLens. |
+| Hide Self | Off | Hides your own avatar from VRCLens. |
+
+---
+
+## Drone
+
+### Drone Speed
+
+**Modifies the Drone Speed slider to go slower or faster than default**
+
+There are two versions, only add one to your avatar:
+
+- **Slower** allows the drone to move much slower. 0% is now zero speed.
+- **Slower and Faster** allows the drone to move much slower and much faster. 0% is now zero speed, 75% is the original max speed, and 100% is 32x the original max speed.
+
+#### Usage
+
+Use the built-in Drone Speed slider as usual.
+
+<video src="https://github.com/user-attachments/assets/672eee73-1523-4737-9267-767bda7d8efb"></video>
+
+### Move Drone Vertical
+
+**Adds a puppet menu to move the drone vertically**
+
+The usual way to move the drone vertically is to use gestures to switch between forward/back and up/down movement. With a separate puppet menu, you can move the drone vertically more easily, and also move both forward/back and up/down at the same time.
+
+#### Usage
+
+The puppet menu will be in your menu under `VRCLens/Custom/Move Drone Vertical`.
+
+<video src="https://github.com/user-attachments/assets/172956c2-84d5-4f11-9ad8-f93599b73564"></video>
+
+### Avatar Offset
+
+**Offsets the camera from your avatar while keeping hand control**
+
+Offsets the camera from your avatar like Avatar Drop, except you can still move the camera with your hand. As if you had a mirrored clone that was further, taller, or shorter than you actually are.
+
+#### Usage
+
+There will be 3 toggles in your menu under `VRCLens/Custom/Avatar Offset`:
+
+- **AvatarOffset** enables the avatar offset. Once toggled, use the Drone to move the camera away from you.
+- **Rotate With Avatar** locks the camera's rotation with your avatar rotation. By default, the camera stays in place when you rotate.
+- **Drop (Reset to Hand)** resets the camera back to your hand. It is the same as the Drone Drop button, just here for convenience.
+
+<video src="https://github.com/user-attachments/assets/8cfbe8ca-1adb-4b94-802d-95cf99186c06"></video>
+
+---
+
+## Focus
+
+### Manual Focus (9m)
+
+**Limits the Manual Focus slider to 9m**
+
+Limits the Manual Focus slider to a maximum of 9m, or 50% in the original slider. Also adds a very small amount of smoothing. Use this for finer control over focus at short distances.
+
+#### Usage
+
+Use the built-in Manual Focus slider as usual.
+
+<video src="https://github.com/user-attachments/assets/9f8496e8-8a36-44f0-b450-0b3474b765f4"></video>
+
+### Manual Focus (0.1m to 9m)
+
+**Allows Manual Focus down to 0.1m instead of the default 0.5m minimum**
+
+Modifies VRCLens to allow closer focus than the default 0.5m minimum. Also limits Manual Focus to a maximum of 9m, adds a small amount of smoothing, and disables Auto Focus.
+
+#### Usage
+
+Use the built-in Manual Focus slider as usual.
+
+<video src="https://github.com/user-attachments/assets/c04017d5-4824-4fda-b1ae-a4528d427ae5"></video>
+
+### Manual Focus Assist
+
+**Uses avatar auto-focus to reduce blur on avatars near your Manual Focus point**
+
+Helps keep avatars sharp when using Manual Focus. Enable Avatar AF, and all avatars within 2m of your focus distance get reduced blur. Everything else blurs normally.
+
+#### Usage
+
+Enable **Avatar Auto-Focus** (Avatar AF) in VRCLens. Use the built-in Manual Focus slider as usual.
+
+Manual Focus Assist is **enabled by default** when the add-on is installed. Use the toggle in the menu to turn it on or off in-game.
+
+<video src="https://github.com/user-attachments/assets/f07314cb-2abd-43c8-877f-fd09d580ecae"></video>
+
+#### Menu Options
+
+The toggle will be in your menu under `VRCLens/Custom/Manual Focus Assist`.
+
+The default settings work well in most cases, but you can adjust them further in the menu.
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enabled | On / Off | On | Enable or disable the effect. |
+| Strength | 0% - 100% | 85% | How much blur is reduced. 0 = no effect, 100 = fully sharp. |
+| Zone Size | 0m - 20m | 2m | How far in front of and behind the focus distance avatars are affected. 2m means ±2m from focus. |
+| Zone Softness | 0m - 5m | 1m | Smooths the transition at zone edges so avatars don't suddenly jump between sharp and blurry. |
+| Edge Feather | 0 - 0.02 | 0.005 | Softens avatar edges where they meet the blurred background. Higher values = softer transition but may bleed. |
+| Peaking | On / Off | Off | Shows a debug overlay on detected avatars: green = within zone (blur reduced), yellow = transition zone (partial reduction), red = outside zone (full blur). Only visible in preview mode. |
+
+```
+Focus at 10m, Zone Size 2m, Zone Softness 1m:
+
+  Camera --[7m]~~[8m]=====FOCUS ZONE=====[12m]~~[13m]--
+                  ↑            ↑          ↑
+             zone start      focus    zone end
+                ↕                           ↕
+          softness (1m)               softness (1m)
+```
+
+### Max Blur Size
+
+**Adjusts the maximum blur size for performance**
+
+Adds a local-only slider that lets you adjust the maximum blur size when using DoF, which you can use to improve performance (lower blur size = better performance) or change how the blurring looks.
+
+#### Usage
+
+The slider will be in your menu under `VRCLens/Custom/Max Blur Size`.
+
+At 0%, the slider has no effect so it uses whatever blur size you installed VRCLens with. After 0%, the slider increases blur size from `Very Small` up until `Very Large` (see VRCLens installer for the different options).
+
+<video src="https://github.com/user-attachments/assets/d929ee5a-3fec-4bab-8f0e-3e6255932236"></video>
 
 ---
 

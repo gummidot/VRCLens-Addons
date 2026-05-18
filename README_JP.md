@@ -31,6 +31,20 @@
 
 ## アドオン一覧
 
+**フィルター**
+
+| Prefab | 説明 |
+|--------|-------------|
+| [Ghost Lens](#ghost-lens) | Prism Lens FX フィルターにインスパイアされたゴースト/モーションブラーフィルター *(有料、[Booth](https://gummidot.booth.pm/items/8375173))* |
+| [Fisheye Lens](#fisheye-lens) | 魚眼レンズの歪み |
+| [Chromatic Aberration](#chromatic-aberration) | 色収差エフェクト（レンズの不完全性） |
+| [Color Grading](#color-grading) | シャドウ/ミッドトーン/ハイライトの色調整とブライトネス |
+| [Film Grain](#film-grain) | フィルムグレインオーバーレイエフェクト |
+| [Vignette](#vignette) | 画面端を暗くするビネットエフェクト |
+| [Letterbox](#letterbox) | レターボックス/ピラーボックスのアスペクト比プリセット |
+| [Depth Fog](#depth-fog) | シーンの奥行きに基づく大気フォグ |
+| [Tilt-Shift](#tilt-shift) | チルトシフト・ミニチュア被写界深度 |
+
 **カメラ**
 
 | Prefab | 説明 |
@@ -58,20 +72,6 @@
 | [Manual Focus Assist](#manual-focus-assist) | フォーカスポイント付近のアバターのぼかしを軽減 |
 | [Max Blur Size](#max-blur-size) | パフォーマンス向上のため最大ぼかしサイズを調整 |
 
-**フィルター**
-
-| Prefab | 説明 |
-|--------|-------------|
-| [Ghost Lens](#ghost-lens) | Prism Lens FX フィルターにインスパイアされたゴースト/モーションブラーフィルター *(有料、[Booth](https://gummidot.booth.pm/))* |
-| [Fisheye Lens](#fisheye-lens) | 魚眼レンズの歪み |
-| [Chromatic Aberration](#chromatic-aberration) | 色収差エフェクト（レンズの不完全性） |
-| [Color Grading](#color-grading) | シャドウ/ミッドトーン/ハイライトの色調整とブライトネス |
-| [Film Grain](#film-grain) | フィルムグレインオーバーレイエフェクト |
-| [Vignette](#vignette) | 画面端を暗くするビネットエフェクト |
-| [Letterbox](#letterbox) | レターボックス/ピラーボックスのアスペクト比プリセット |
-| [Depth Fog](#depth-fog) | シーンの奥行きに基づく大気フォグ |
-| [Tilt-Shift](#tilt-shift) | チルトシフト・ミニチュア被写界深度 |
-
 **ユーティリティ**
 
 | Prefab | 説明 |
@@ -82,227 +82,12 @@
 
 ---
 
-## カメラ
-
-### Smooth Rotate
-
-**カメラの動きをスムーズにするスライダーを追加**
-
-デスクトップとVRの両方で動作し、OVR-SmoothTracking よりも強力にカメラの動きを滑らかに（スムージング）できます。
-
-#### 使い方
-
-スライダーはメニューの `VRCLens/Custom/Smooth Rotate` にあります。
-0%が最小（デフォルト）のスムージングで、100%が最大のスムージングです。
-
-これを動作させるには、Stabilize モード（白/黄色の手アイコン）をオンにしてください。
-
-<video src="https://github.com/user-attachments/assets/05d5c2fd-28e6-4f38-8b98-11be5db84a1b"></video>
-
-#### クレジット
-
-やり方を解説してくれた [Minkis](https://www.youtube.com/watch?v=XMcTfFoNUHA) に感謝します。
-
-### Smooth Zoom
-
-**ズームスライダーに軽いスムージングを追加**
-
-#### 使い方
-
-標準のズームスライダーをいつも通り使ってください。
-
-<video src="https://github.com/user-attachments/assets/b9be523d-e54e-4b8c-bd44-dd43ec843ce1"></video>
-
-### Custom Resolution
-
-**カメラ解像度とアンチエイリアスを上書き**
-
-通常、センサー解像度とアンチエイリアスは VRCLens のインストール時にしか設定できません。このアドオンを使えば、VRCLens を再インストールしなくても解像度とアンチエイリアスを変更できます。
-
-フル SBS 3D の実験的サポートも追加されます。VRCLens は現在サイドバイサイド3Dモードにハーフ SBS を使用しているため、1920x1080 で3D録画すると水平解像度が半分（片目あたり960x1080）の 1920x1080 映像になります。フル SBS なら 3840x1080 で録画し、フル解像度（片目あたり1920x1080）の 1920x1080 映像を生成できます。
-
-#### 使い方
-
-**Override Resolution** と **Override Anti-Aliasing** にカスタム解像度やアンチエイリアスを入力してください。
-
-必要に応じて **Use Full SBS 3D (experimental)** をクリックして有効にしてください。その場合は、幅を2倍にした解像度に変更してください。
-
-![CustomResolution](Doc/CustomResolution.png)
-
-### Far Clip Plane
-
-**カメラの遠クリッピング面を拡張**
-
-一部のワールドでは、VRCLens の短い遠クリッピング面のせいで遠くのオブジェクトが消えてしまいます。
-このアドオンは、遠クリッピング面を最大 `128000` まで上げるローカル専用スライダーを追加します。
-
-#### 使い方
-
-スライダーはメニューの `VRCLens/Custom/Far Clip Plane` にあります。
-
-<video src="https://github.com/user-attachments/assets/bb43007a-006c-4075-aa23-1c9b4624e407"></video>
-
-テストワールド: [Tulip Riverie...](https://vrchat.com/home/world/wrld_fcad2657-05c6-4226-ac5d-9cd1688beb74/info)、[Cycle of Life](https://vrchat.com/home/world/wrld_cd085851-4baf-4fb8-9a2a-e0e20f686502/info)
-
-### Player Visibility
-
-**VRCLens から他プレイヤーや自分を非表示にする**
-
-VRCLens に映るものを制御する2つの独立したトグル:
-
-- **Hide Remote Players** は写真から他プレイヤーを除外します。
-- **Hide Self** は写真から自分のアバターを除外します。
-
-両方を同時に有効にすると、プレイヤーなしでワールドだけを撮影できます。
-
-> [!NOTE]
-> これはワールドのミラーや他プレイヤーの見え方には影響しません。
-
-#### 使い方
-
-トグルはメニューの `VRCLens/Custom/Player Visibility` にあります。
-
-| 設定 | デフォルト | 説明 |
-|---|---|---|
-| Hide Remote Players | Off | VRCLens から他プレイヤーを非表示にする。 |
-| Hide Self | Off | VRCLens から自分のアバターを非表示にする。 |
-
----
-
-## ドローン
-
-### Drone Speed
-
-**ドローン速度スライダーをデフォルトより遅く/速く調整**
-
-2つのバージョンがあります。アバターにはどちらか1つだけ追加してください:
-
-- **Slower** はドローンをより遅く動かせるようにします。0%がゼロ速度になります。
-- **Slower and Faster** はドローンをより遅く、またはより速く動かせるようにします。0%がゼロ速度、75%が元の最高速度、100%が元の最高速度の32倍になります。
-
-#### 使い方
-
-標準のドローン速度スライダーをいつも通り使ってください。
-
-<video src="https://github.com/user-attachments/assets/672eee73-1523-4737-9267-767bda7d8efb"></video>
-
-### Move Drone Vertical
-
-**ドローンを垂直に移動するパペットメニューを追加**
-
-通常、ドローンを垂直に動かすにはジェスチャーで前後移動と上下移動を切り替える必要があります。パペットメニューを使えば、ドローンをより簡単に垂直移動でき、前後と上下を同時に動かすこともできます。
-
-#### 使い方
-
-パペットメニューはメニューの `VRCLens/Custom/Move Drone Vertical` にあります。
-
-<video src="https://github.com/user-attachments/assets/172956c2-84d5-4f11-9ad8-f93599b73564"></video>
-
-### Avatar Offset
-
-**手動操作を維持しながらアバターからカメラをオフセット**
-
-Avatar Drop のようにアバターからカメラをオフセットしますが、手でカメラを動かし続けられます。自分よりも遠く、高く、または低い位置にミラーリングされた分身がいるような感覚です。
-
-#### 使い方
-
-メニューの `VRCLens/Custom/Avatar Offset` に3つのトグルがあります:
-
-- **AvatarOffset** はアバターオフセットを有効にします。トグルしたら、ドローンでカメラを自分から離してください。
-- **Rotate With Avatar** はカメラの回転をアバターの回転に連動させます。デフォルトでは、回転してもカメラはその場にとどまります。
-- **Drop (Reset to Hand)** はカメラを手元に戻します。ドローンの Drop ボタンと同じ機能ですが、利便性のためにこちらのメニューにも配置しています。
-
-<video src="https://github.com/user-attachments/assets/8cfbe8ca-1adb-4b94-802d-95cf99186c06"></video>
-
----
-
-## フォーカス
-
-### Manual Focus (9m)
-
-**Manual Focus スライダーを9mに制限**
-
-Manual Focus スライダーの最大値を9m（元のスライダーの50%）に制限します。ごく軽いスムージングも追加されます。短距離でのフォーカスをより細かく制御したい場合に使用してください。
-
-#### 使い方
-
-標準の Manual Focus スライダーをいつも通り使ってください。
-
-<video src="https://github.com/user-attachments/assets/9f8496e8-8a36-44f0-b450-0b3474b765f4"></video>
-
-### Manual Focus (0.1m to 9m)
-
-**Manual Focus をデフォルトの最小0.5mではなく0.1mまで下げられるようにする**
-
-VRCLens の設定を変更し、デフォルトの最小値0.5mよりも近くにピントを合わせられるようにします。Manual Focus の最大値も9mに制限され、軽いスムージングが追加され、オートフォーカスが無効になります。
-
-#### 使い方
-
-標準の Manual Focus スライダーをいつも通り使ってください。
-
-<video src="https://github.com/user-attachments/assets/c04017d5-4824-4fda-b1ae-a4528d427ae5"></video>
-
-### Manual Focus Assist
-
-**アバターAFを使用して Manual Focus ポイント付近のアバターのぼかしを軽減**
-
-Manual Focus 使用時にアバターをシャープに保つのを助けます。Avatar AF を有効にすると、フォーカス距離の前後2m以内のすべてのアバターのぼかしが軽減されます。それ以外は通常通りにぼけます。
-
-#### 使い方
-
-VRCLens で **Avatar Auto-Focus**（Avatar AF）を有効にしてください。標準の Manual Focus スライダーをいつも通り使ってください。
-
-Manual Focus Assist はアドオンのインストール時に**デフォルトで有効**です。メニューのトグルでゲーム内でオン/オフを切り替えてください。
-
-<video src="https://github.com/user-attachments/assets/f07314cb-2abd-43c8-877f-fd09d580ecae"></video>
-
-#### メニューオプション
-
-トグルはメニューの `VRCLens/Custom/Manual Focus Assist` にあります。
-
-デフォルト設定はほとんどの場合にうまく機能しますが、メニューでさらに調整できます。
-
-| 設定 | 範囲 | デフォルト | 説明 |
-|---|---|---|---|
-| Enabled | On / Off | On | エフェクトの有効/無効を切り替え。 |
-| Strength | 0% - 100% | 85% | ぼかし軽減の度合い。0 = 効果なし、100 = 完全にシャープ。 |
-| Zone Size | 0m - 20m | 2m | フォーカス距離の前後どこまでアバターに効果があるか。2mはフォーカスから±2m。 |
-| Zone Softness | 0m - 5m | 1m | ゾーン端の遷移をなめらかにし、アバターが急にシャープ/ぼけに切り替わるのを防ぐ。 |
-| Edge Feather | 0 - 0.02 | 0.005 | アバターの輪郭とぼけ背景の境界をやわらかくする。高い値ほどなめらかだが、にじむ場合がある。 |
-| Peaking | On / Off | Off | 検出されたアバターにデバッグオーバーレイを表示: 緑 = ゾーン内（ぼかし軽減）、黄 = 遷移ゾーン（部分的に軽減）、赤 = ゾーン外（通常のぼかし）。プレビューモードのみ表示。 |
-
-```
-フォーカス 10m、Zone Size 2m、Zone Softness 1m:
-
-  カメラ --[7m]~~[8m]=====フォーカスゾーン=====[12m]~~[13m]--
-                  ↑            ↑            ↑
-             ゾーン開始      フォーカス    ゾーン終了
-                ↕                              ↕
-          ソフトネス (1m)                 ソフトネス (1m)
-```
-
-### Max Blur Size
-
-**パフォーマンス向上のため最大ぼかしサイズを調整**
-
-DoF 使用時の最大ぼかしサイズを調整できるローカル専用スライダーを追加します。パフォーマンスの改善（ぼかしサイズを下げる = パフォーマンス向上）やぼかしの見た目を変更するのに使用できます。
-
-#### 使い方
-
-スライダーはメニューの `VRCLens/Custom/Max Blur Size` にあります。
-
-0%ではスライダーの効果がなく、VRCLens インストール時のぼかしサイズがそのまま使われます。0%以降は `Very Small` から `Very Large` までぼかしサイズが増加します（各オプションについては VRCLens インストーラーを参照してください）。
-
-<video src="https://github.com/user-attachments/assets/d929ee5a-3fec-4bab-8f0e-3e6255932236"></video>
-
----
-
 ## フィルター
 
 ### Ghost Lens
 
 > [!NOTE]
-> Ghost Lens は有料アドオンで、[Booth](https://gummidot.booth.pm/) で販売しています。その他のアドオンはすべて無料です。
+> Ghost Lens は有料アドオンで、[Booth](https://gummidot.booth.pm/items/8375173) で販売しています。その他のアドオンはすべて無料です。
 
 **[Prism Lens FX](https://prismlensfx.com/) フィルターにインスパイアされたゴースト/モーションブラーフィルター**
 
@@ -581,6 +366,221 @@ Axial Focus-Aware サブメニュー:
 | Position | 0% - 100% | 50% | シャープエリアを VRCLens のフォーカスポイントから近づけるか遠ざけるか。50% = オフセットなし、0% = 手前に引く（約50m）、100% = 奥に押す（約50m）。 |
 | Width | 0% - 100% | 50% | シャープエリアの深さ。距離に応じてスケールするため、小さい値で薄いスライス、大きい値でより多くのシーンがシャープに。 |
 | Angle | 0% - 100% | 50% | シャープエリアを傾けて、フレーム内で手前から奥にかけてフォーカスを変化させる。50% = 傾きなし（通常の被写界深度）、50%以下 = 画面上部が手前にフォーカス（見下ろすショットに最適）、50%以上 = 画面上部が奥にフォーカス（見上げるショットに最適）。 |
+
+---
+
+## カメラ
+
+### Smooth Rotate
+
+**カメラの動きをスムーズにするスライダーを追加**
+
+デスクトップとVRの両方で動作し、OVR-SmoothTracking よりも強力にカメラの動きを滑らかに（スムージング）できます。
+
+#### 使い方
+
+スライダーはメニューの `VRCLens/Custom/Smooth Rotate` にあります。
+0%が最小（デフォルト）のスムージングで、100%が最大のスムージングです。
+
+これを動作させるには、Stabilize モード（白/黄色の手アイコン）をオンにしてください。
+
+<video src="https://github.com/user-attachments/assets/05d5c2fd-28e6-4f38-8b98-11be5db84a1b"></video>
+
+#### クレジット
+
+やり方を解説してくれた [Minkis](https://www.youtube.com/watch?v=XMcTfFoNUHA) に感謝します。
+
+### Smooth Zoom
+
+**ズームスライダーに軽いスムージングを追加**
+
+#### 使い方
+
+標準のズームスライダーをいつも通り使ってください。
+
+<video src="https://github.com/user-attachments/assets/b9be523d-e54e-4b8c-bd44-dd43ec843ce1"></video>
+
+### Custom Resolution
+
+**カメラ解像度とアンチエイリアスを上書き**
+
+通常、センサー解像度とアンチエイリアスは VRCLens のインストール時にしか設定できません。このアドオンを使えば、VRCLens を再インストールしなくても解像度とアンチエイリアスを変更できます。
+
+フル SBS 3D の実験的サポートも追加されます。VRCLens は現在サイドバイサイド3Dモードにハーフ SBS を使用しているため、1920x1080 で3D録画すると水平解像度が半分（片目あたり960x1080）の 1920x1080 映像になります。フル SBS なら 3840x1080 で録画し、フル解像度（片目あたり1920x1080）の 1920x1080 映像を生成できます。
+
+#### 使い方
+
+**Override Resolution** と **Override Anti-Aliasing** にカスタム解像度やアンチエイリアスを入力してください。
+
+必要に応じて **Use Full SBS 3D (experimental)** をクリックして有効にしてください。その場合は、幅を2倍にした解像度に変更してください。
+
+![CustomResolution](Doc/CustomResolution.png)
+
+### Far Clip Plane
+
+**カメラの遠クリッピング面を拡張**
+
+一部のワールドでは、VRCLens の短い遠クリッピング面のせいで遠くのオブジェクトが消えてしまいます。
+このアドオンは、遠クリッピング面を最大 `128000` まで上げるローカル専用スライダーを追加します。
+
+#### 使い方
+
+スライダーはメニューの `VRCLens/Custom/Far Clip Plane` にあります。
+
+<video src="https://github.com/user-attachments/assets/bb43007a-006c-4075-aa23-1c9b4624e407"></video>
+
+テストワールド: [Tulip Riverie...](https://vrchat.com/home/world/wrld_fcad2657-05c6-4226-ac5d-9cd1688beb74/info)、[Cycle of Life](https://vrchat.com/home/world/wrld_cd085851-4baf-4fb8-9a2a-e0e20f686502/info)
+
+### Player Visibility
+
+**VRCLens から他プレイヤーや自分を非表示にする**
+
+VRCLens に映るものを制御する2つの独立したトグル:
+
+- **Hide Remote Players** は写真から他プレイヤーを除外します。
+- **Hide Self** は写真から自分のアバターを除外します。
+
+両方を同時に有効にすると、プレイヤーなしでワールドだけを撮影できます。
+
+> [!NOTE]
+> これはワールドのミラーや他プレイヤーの見え方には影響しません。
+
+#### 使い方
+
+トグルはメニューの `VRCLens/Custom/Player Visibility` にあります。
+
+| 設定 | デフォルト | 説明 |
+|---|---|---|
+| Hide Remote Players | Off | VRCLens から他プレイヤーを非表示にする。 |
+| Hide Self | Off | VRCLens から自分のアバターを非表示にする。 |
+
+---
+
+## ドローン
+
+### Drone Speed
+
+**ドローン速度スライダーをデフォルトより遅く/速く調整**
+
+2つのバージョンがあります。アバターにはどちらか1つだけ追加してください:
+
+- **Slower** はドローンをより遅く動かせるようにします。0%がゼロ速度になります。
+- **Slower and Faster** はドローンをより遅く、またはより速く動かせるようにします。0%がゼロ速度、75%が元の最高速度、100%が元の最高速度の32倍になります。
+
+#### 使い方
+
+標準のドローン速度スライダーをいつも通り使ってください。
+
+<video src="https://github.com/user-attachments/assets/672eee73-1523-4737-9267-767bda7d8efb"></video>
+
+### Move Drone Vertical
+
+**ドローンを垂直に移動するパペットメニューを追加**
+
+通常、ドローンを垂直に動かすにはジェスチャーで前後移動と上下移動を切り替える必要があります。パペットメニューを使えば、ドローンをより簡単に垂直移動でき、前後と上下を同時に動かすこともできます。
+
+#### 使い方
+
+パペットメニューはメニューの `VRCLens/Custom/Move Drone Vertical` にあります。
+
+<video src="https://github.com/user-attachments/assets/172956c2-84d5-4f11-9ad8-f93599b73564"></video>
+
+### Avatar Offset
+
+**手動操作を維持しながらアバターからカメラをオフセット**
+
+Avatar Drop のようにアバターからカメラをオフセットしますが、手でカメラを動かし続けられます。自分よりも遠く、高く、または低い位置にミラーリングされた分身がいるような感覚です。
+
+#### 使い方
+
+メニューの `VRCLens/Custom/Avatar Offset` に3つのトグルがあります:
+
+- **AvatarOffset** はアバターオフセットを有効にします。トグルしたら、ドローンでカメラを自分から離してください。
+- **Rotate With Avatar** はカメラの回転をアバターの回転に連動させます。デフォルトでは、回転してもカメラはその場にとどまります。
+- **Drop (Reset to Hand)** はカメラを手元に戻します。ドローンの Drop ボタンと同じ機能ですが、利便性のためにこちらのメニューにも配置しています。
+
+<video src="https://github.com/user-attachments/assets/8cfbe8ca-1adb-4b94-802d-95cf99186c06"></video>
+
+---
+
+## フォーカス
+
+### Manual Focus (9m)
+
+**Manual Focus スライダーを9mに制限**
+
+Manual Focus スライダーの最大値を9m（元のスライダーの50%）に制限します。ごく軽いスムージングも追加されます。短距離でのフォーカスをより細かく制御したい場合に使用してください。
+
+#### 使い方
+
+標準の Manual Focus スライダーをいつも通り使ってください。
+
+<video src="https://github.com/user-attachments/assets/9f8496e8-8a36-44f0-b450-0b3474b765f4"></video>
+
+### Manual Focus (0.1m to 9m)
+
+**Manual Focus をデフォルトの最小0.5mではなく0.1mまで下げられるようにする**
+
+VRCLens の設定を変更し、デフォルトの最小値0.5mよりも近くにピントを合わせられるようにします。Manual Focus の最大値も9mに制限され、軽いスムージングが追加され、オートフォーカスが無効になります。
+
+#### 使い方
+
+標準の Manual Focus スライダーをいつも通り使ってください。
+
+<video src="https://github.com/user-attachments/assets/c04017d5-4824-4fda-b1ae-a4528d427ae5"></video>
+
+### Manual Focus Assist
+
+**アバターAFを使用して Manual Focus ポイント付近のアバターのぼかしを軽減**
+
+Manual Focus 使用時にアバターをシャープに保つのを助けます。Avatar AF を有効にすると、フォーカス距離の前後2m以内のすべてのアバターのぼかしが軽減されます。それ以外は通常通りにぼけます。
+
+#### 使い方
+
+VRCLens で **Avatar Auto-Focus**（Avatar AF）を有効にしてください。標準の Manual Focus スライダーをいつも通り使ってください。
+
+Manual Focus Assist はアドオンのインストール時に**デフォルトで有効**です。メニューのトグルでゲーム内でオン/オフを切り替えてください。
+
+<video src="https://github.com/user-attachments/assets/f07314cb-2abd-43c8-877f-fd09d580ecae"></video>
+
+#### メニューオプション
+
+トグルはメニューの `VRCLens/Custom/Manual Focus Assist` にあります。
+
+デフォルト設定はほとんどの場合にうまく機能しますが、メニューでさらに調整できます。
+
+| 設定 | 範囲 | デフォルト | 説明 |
+|---|---|---|---|
+| Enabled | On / Off | On | エフェクトの有効/無効を切り替え。 |
+| Strength | 0% - 100% | 85% | ぼかし軽減の度合い。0 = 効果なし、100 = 完全にシャープ。 |
+| Zone Size | 0m - 20m | 2m | フォーカス距離の前後どこまでアバターに効果があるか。2mはフォーカスから±2m。 |
+| Zone Softness | 0m - 5m | 1m | ゾーン端の遷移をなめらかにし、アバターが急にシャープ/ぼけに切り替わるのを防ぐ。 |
+| Edge Feather | 0 - 0.02 | 0.005 | アバターの輪郭とぼけ背景の境界をやわらかくする。高い値ほどなめらかだが、にじむ場合がある。 |
+| Peaking | On / Off | Off | 検出されたアバターにデバッグオーバーレイを表示: 緑 = ゾーン内（ぼかし軽減）、黄 = 遷移ゾーン（部分的に軽減）、赤 = ゾーン外（通常のぼかし）。プレビューモードのみ表示。 |
+
+```
+フォーカス 10m、Zone Size 2m、Zone Softness 1m:
+
+  カメラ --[7m]~~[8m]=====フォーカスゾーン=====[12m]~~[13m]--
+                  ↑            ↑            ↑
+             ゾーン開始      フォーカス    ゾーン終了
+                ↕                              ↕
+          ソフトネス (1m)                 ソフトネス (1m)
+```
+
+### Max Blur Size
+
+**パフォーマンス向上のため最大ぼかしサイズを調整**
+
+DoF 使用時の最大ぼかしサイズを調整できるローカル専用スライダーを追加します。パフォーマンスの改善（ぼかしサイズを下げる = パフォーマンス向上）やぼかしの見た目を変更するのに使用できます。
+
+#### 使い方
+
+スライダーはメニューの `VRCLens/Custom/Max Blur Size` にあります。
+
+0%ではスライダーの効果がなく、VRCLens インストール時のぼかしサイズがそのまま使われます。0%以降は `Very Small` から `Very Large` までぼかしサイズが増加します（各オプションについては VRCLens インストーラーを参照してください）。
+
+<video src="https://github.com/user-attachments/assets/d929ee5a-3fec-4bab-8f0e-3e6255932236"></video>
 
 ---
 
