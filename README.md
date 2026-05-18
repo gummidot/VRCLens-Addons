@@ -9,9 +9,7 @@ Camera filters and quality-of-life add-ons for [VRCLens by Hirabiki](https://hir
 
 ## Installation
 
-Each add-on is a VRCFury prefab that you drag-n-drop onto your avatar to install.
-You can pick which ones to install, then easily remove them by deleting the prefab.
-All add-ons are local-only or take no extra parameter memory.
+Each add-on is a VRCFury prefab that you drag-and-drop onto an existing VRCLens installation. Pick which ones you want, add or remove them any time, all without modifying VRCLens. All add-ons are local-only or take no extra parameter memory.
 
 1. Install [VRCLens](https://hirabiki.gumroad.com/l/rpnel) on your avatar first.
 1. Make sure you have [VRCFury](https://vrcfury.com/download) installed.
