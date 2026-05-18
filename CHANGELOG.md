@@ -1,0 +1,66 @@
+# Changelog
+
+## v2.0.0
+
+**NOTE**: Upgrading from v1.x? The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any prefabs onto your avatar.
+
+- Add Ghost Lens filter (paid add-on, available on [Booth](https://gummidot.booth.pm/items/8375173))
+- Add Chromatic Aberration
+- Add Color Grading
+- Add Depth Fog
+- Add Film Grain
+- Add Fisheye Lens
+- Add Letterbox
+- Add Tilt-Shift
+- Add Vignette
+- Add Player Visibility
+- Update for VRCLens 1.10.0 support
+
+## v1.10.0
+
+- Add Manual Focus Assist
+
+## v1.9.0
+
+- Add Manual Focus (0.1m to 9m)
+
+## v1.8.0
+
+- Add Menu Extra
+
+## v1.7.0
+
+- Add Custom Resolution
+
+## v1.6.0
+
+- Add Smooth Zoom
+- Add Manual Focus (9m)
+- Add Avatar Offset
+
+## v1.5.0
+
+- Add Fix Avatar Drop
+- Fix Move Drone Vertical not working without VRCLens Optimizer
+
+## v1.4.0
+
+- Add Move Drone Vertical
+- Add VRCLens Optimizer
+
+## v1.3.0
+
+- Add Max Blur Size
+
+## v1.2.0
+
+- Add Far Clip Plane
+- Change Smooth Rotate to local-only
+
+## v1.1.0
+
+- Add Drone Speed
+
+## v1.0.0
+
+- Add Smooth Rotate
