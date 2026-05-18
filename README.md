@@ -162,6 +162,9 @@ Advanced submenu:
 | Layers | 0% - 100% | 0% | Trail distance multiplier (1-5 layers). |
 | Edge Smoothing | 0% - 100% | 30% | Fades the ghost effect near the screen edges to prevent edge streaking. Higher = cleaner edges, more muted ghost. |
 
+> [!NOTE]
+> Ghost Lens is more GPU-intensive than other filter mods. You may notice lower FPS while it is active, especially at high smear or layer values.
+
 ### Fisheye Lens
 
 **Fisheye lens distortion**
