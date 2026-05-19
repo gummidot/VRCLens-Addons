@@ -633,7 +633,7 @@ Drag and drop the `VRCLensOptimizer` prefab onto the `VRCLens` object on your av
 ## Thanks to
 
 - [Hirabiki](https://hirabiki.gumroad.com/l/rpnel) for VRCLens
-- @Gerzybow for the original ideas and feedback for Ghost Lens, Chromatic Aberration, and Letterbox
+- @Gerzybow for the original ideas and feedback for Ghost Lens and Chromatic Aberration
 - @EsonAdventures for help testing Ghost Lens and the idea for Player Visibility
 
 ## Contact
