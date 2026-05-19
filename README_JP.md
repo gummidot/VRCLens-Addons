@@ -37,7 +37,7 @@ Hashtag / ハッシュタグ: #GhostLens #VRCLens
 |--------|-------------|
 | [Ghost Lens](#ghost-lens) | Prism Lens FX フィルターにインスパイアされたゴースト/モーションブラーフィルター *(有料、[Booth](https://gummidot.booth.pm/items/8375173))* |
 | [Fisheye Lens](#fisheye-lens) | 魚眼レンズの歪み |
-| [Chromatic Aberration](#chromatic-aberration) | 色収差エフェクト（レンズ特有の色ズレを再現） |
+| [Chromatic Aberration](#chromatic-aberration) | 色収差エフェクト |
 | [Color Grading](#color-grading) | シャドウ/ミッドトーン/ハイライトの色調整とブライトネス |
 | [Film Grain](#film-grain) | フィルムグレインオーバーレイエフェクト |
 | [Vignette](#vignette) | 画面端を暗くするビネットエフェクト |

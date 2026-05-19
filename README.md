@@ -37,7 +37,7 @@ Each add-on is a VRCFury prefab that you drag-and-drop onto an existing VRCLens 
 |--------|-------------|
 | [Ghost Lens](#ghost-lens) | Ghosting/motion blur filter inspired by Prism Lens FX filters *(paid, [Booth](https://gummidot.booth.pm/items/8375173))* |
 | [Fisheye Lens](#fisheye-lens) | Fisheye lens distortion |
-| [Chromatic Aberration](#chromatic-aberration) | Color fringing effect (lens imperfection) |
+| [Chromatic Aberration](#chromatic-aberration) | Color fringing effect |
 | [Color Grading](#color-grading) | Shadow/midtone/highlight color adjustments with brightness |
 | [Film Grain](#film-grain) | Film grain overlay effect |
 | [Vignette](#vignette) | Vignette darkening around edges |
