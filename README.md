@@ -4,6 +4,8 @@ Camera filters and quality-of-life add-ons for [VRCLens by Hirabiki](https://hir
 
 [**Download the latest version**](https://github.com/gummidot/VRCLens-Addons/releases/latest) | [日本語はこちら (Japanese)](README_JP.md)
 
+Hashtag / ハッシュタグ: #GhostLens #VRCLens
+
 > [!NOTE]
 > **Upgrading from v1.x?** The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any prefabs onto your avatar.
 
@@ -653,4 +655,4 @@ VRCLens directly modifies your avatar’s FX controller, menu, and parameters, m
 
 If you convert VRCLens to a VRCFury prefab, VRCLens can be set up once, then drag-n-drop'd to different avatar versions, and then be easily deleted.
 
-This is a manual process - see guide at https://gummidot.notion.site/VRCLens-as-a-VRCFury-Prefab-15623187a377802fbc17d0357e56f8bc
+This is a manual process - see the [VRCLens as a VRCFury Prefab guide](Doc/VRCFury-Prefab-Guide/VRCLens-VRCFury-Prefab.md)
