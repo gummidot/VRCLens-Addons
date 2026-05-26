@@ -672,7 +672,7 @@ At 0%, the slider has no effect so it uses whatever blur size you installed VRCL
 
 <video src="https://github.com/user-attachments/assets/630e7b76-6000-4505-958e-e99404c6cffc"></video>
 
-In the radial menu: `VRCLens > Custom > Preset Saver > Save > {1-6}` to save the current settings, then `Load > {1-6}` to restore. Each Save and Load submenu has all 6 slot buttons as siblings, so you can A/B-test slots with a single tap. `Load Defaults` resets your current custom add-on settings to their default values.
+In the radial menu: `VRCLens > Custom > Preset Saver > Save > {1-6}` to save the current settings, then `Load > {1-6}` to restore. `Load Defaults` resets your current custom add-on settings to their default values.
 
 | Menu | Action |
 |------|--------|
