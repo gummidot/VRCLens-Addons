@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.1.0
+
+- Add Swirly Bokeh filter (included with Ghost Lens)
+- Add Pixelation filter
+- Add Preset Saver
+- Fix Color Grading causing slight brightness reduction when enabled with default settings
+- Fix Depth Fog Enable being unintentionally synced (now local-only)
+
 ## v2.0.0
 
 **NOTE**: Upgrading from v1.x? The folder structure has changed in v2.0. Delete the entire `Assets/VRCLens_Custom` folder and re-import the new package. Then re-drag any prefabs onto your avatar.

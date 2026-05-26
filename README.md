@@ -44,6 +44,9 @@ Each add-on is a VRCFury prefab that you drag-and-drop onto an existing VRCLens 
 | [Letterbox](#letterbox) | Letterbox/pillarbox aspect ratio presets |
 | [Depth Fog](#depth-fog) | Atmospheric fog based on scene depth |
 | [Tilt-Shift](#tilt-shift) | Tilt-shift miniature depth-of-field |
+| [Pixelation](#pixelation) | Retro pixelation effect |
+| [Swirly Bokeh](#swirly-bokeh) | Swirly bokeh effect |
+<!-- | [Soft Glow](#soft-glow) | Diffusion glow filter | -->
 
 **Camera**
 
@@ -76,6 +79,7 @@ Each add-on is a VRCFury prefab that you drag-and-drop onto an existing VRCLens 
 
 | Prefab | Description |
 |--------|-------------|
+| [Preset Saver](#preset-saver) | Save up to 6 presets for your custom add-on settings |
 | [Fix Avatar Drop](#fix-avatar-drop) | Fixes Avatar Drop broken in VRCLens 1.9.1+ |
 | [VRCLens Optimizer](#vrclens-optimizer) | Removes optional VRCLens components |
 | [Menu Extra](#menu-extra) | Miscellaneous menu improvements |
@@ -136,7 +140,7 @@ Focus Zone submenu:
 | Setting | Range | Default | Description |
 |---|---|---|---|
 | Enable | On / Off | Off | Ghost only near the focus point (ghost on subject). DoF does not need to be enabled; just set VRCLens manual focus. |
-| Spread | 0% - 100% | 40% | How far from the focus point the masking extends (0.1-50m sigma). Low = tight zone, high = covers large objects like trees. |
+| Spread | 0% - 100% | 40% | How far from the focus point the effect extends. Low = tight zone, high = wider zone. |
 | Reverse | On / Off | Off | Reverse: ghost on everything except the focused subject. |
 | Focus Distance | 0% - 100% | 0% | Convenience duplicate of VRCLens's Manual Focus slider. Saves navigating back to the Focus menu. |
 
@@ -370,6 +374,74 @@ The controls will be in your menu under `VRCLens/Custom/Tilt-Shift`.
 | Width | 0% - 100% | 50% | How deep the sharp area is. Scales with distance, so a small value gives a thin slice and a large value keeps more of the scene sharp. |
 | Angle | 0% - 100% | 50% | Tilts the sharp area so it goes from near-foreground to far-distance across the frame. 50% = no tilt (regular depth of field), below 50% = top of frame focused near (good for shots looking down), above 50% = top of frame focused far (good for shots looking up). |
 
+### Pixelation
+
+**Retro pixelation effect**
+
+Pixelates the image into blocks for a low-resolution, retro look.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Pixelation`.
+
+<video src="https://github.com/user-attachments/assets/933e8cc9-a9c3-47b6-a80a-162d915a7303"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Block Size | 0% - 100% | 30% | Pixel block size. 0% = subtle (2px), 100% = chunky (64px). |
+| Dither | 0% - 100% | 0% | Adds a dithering pattern. Combined with Posterize, smooths color steps. On its own, adds a screen-door texture. |
+| Posterize | 0% - 100% | 0% | Reduces the number of colors. 0% = full color, 100% = heavily reduced. |
+| Aspect Ratio | 0% - 100% | 50% | Pixel block shape. 0% = wide, 50% = square, 100% = tall. |
+
+### Swirly Bokeh
+
+> [!NOTE]
+> Early preview: currently included in the [Ghost Lens package](https://gummidot.booth.pm/items/8375173) only. May move to the free base package in a future update.
+
+**Swirly bokeh effect**
+
+Recreates the swirling bokeh effect found in some vintage lenses. With DoF enabled, background blur takes on a spiral shape that increases toward the edges of the frame.
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Swirly Bokeh`.
+
+<video src="https://github.com/user-attachments/assets/505fc136-c2c5-47e5-9f0c-fd7a06ebad4c"></video>
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Strength | 0% - 100% | 70% | How intense the swirl is. |
+| Radius | 0% - 100% | 80% | How much of the frame is affected. Higher = swirl starts closer to center. |
+
+<!--
+### Soft Glow
+
+**Diffusion glow filter**
+
+Softens fine detail and lets bright areas glow outward. Optional Focus Zone mode applies the effect only to the focused subject (or only the background).
+
+#### Usage
+
+The controls will be in your menu under `VRCLens/Custom/Soft Glow`.
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Enable or disable the effect. |
+| Strength | 0% - 100% | 35% | How much bright areas glow. |
+| Diffusion | 0% - 100% | 35% | How much fine detail is softened. |
+| Radius | 0% - 100% | 35% | How far the effect spreads. |
+
+Focus Zone submenu:
+
+| Setting | Range | Default | Description |
+|---|---|---|---|
+| Enable | On / Off | Off | Glow only near the focus point (glow on subject). DoF does not need to be enabled; just set VRCLens manual focus. |
+| Spread | 0% - 100% | 40% | How far from the focus point the effect extends. Low = tight zone, high = wider zone. |
+| Reverse | On / Off | Off | Reverse: glow on everything except the focused subject. |
+-->
+
 ---
 
 ## Camera
@@ -588,6 +660,25 @@ At 0%, the slider has no effect so it uses whatever blur size you installed VRCL
 ---
 
 ## Utility
+
+### Preset Saver
+
+**Save up to 6 presets for your custom add-on settings**
+
+> [!NOTE]
+> VRCLens's own camera controls (e.g., zoom, focus, aperture, DoF mode) are not saved in the presets.
+
+#### Usage
+
+<video src="https://github.com/user-attachments/assets/630e7b76-6000-4505-958e-e99404c6cffc"></video>
+
+In the radial menu: `VRCLens > Custom > Preset Saver > Save > {1-6}` to save the current settings, then `Load > {1-6}` to restore. Each Save and Load submenu has all 6 slot buttons as siblings, so you can A/B-test slots with a single tap. `Load Defaults` resets your current custom add-on settings to their default values.
+
+| Menu | Action |
+|------|--------|
+| Save > 1 - 6 | Save the current custom add-on settings to the chosen slot |
+| Load > 1 - 6 | Load the settings from the chosen slot |
+| Load Defaults | Reset your current custom add-on settings to their default values |
 
 ### Fix Avatar Drop
 
