@@ -2,7 +2,7 @@
 
 ## v2.1.1
 
-- Fix shader add-ons breaking VRCLens when installed via VRCLensForMA alongside other Modular Avatar prefabs (thanks to `@ritsu_tokoron`)
+- Fix add-ons breaking VRCLens when installed via VRCLensForMA alongside other Modular Avatar prefabs (thanks to `@ritsu_tokoron`)
 - Fix Vignette and Swirly Bokeh parameters being unintentionally synced, now local-only (thanks to `@ritsu_tokoron`)
 
 ## v2.1.0
